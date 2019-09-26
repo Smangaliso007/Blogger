@@ -30,8 +30,5 @@ class Article(models.Model):
     date = models.DateField(null=True)
     Genre = models.ManyToManyField('Genre')
 
-    class Meta:
-        ordering = ['pub_date']
-
     def __str__(self):
         return f"{self.Title, self.Author, self.Genre}"
