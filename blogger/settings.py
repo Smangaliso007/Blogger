@@ -27,8 +27,16 @@ MEDIA_URL = '/MEDIA/'
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '1+f&5y@+q@ntek!%*sr14ised=_p!38$a%gb^+yj5#5q&d^_o7')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-# DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
+# DEBUG = True
+DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
+
+SECURE_CONTENT_TYPE_NOSNIFF = True
+SECURE_BROWSER_XSS_FILTER = True
+SECURE_SSL_REDIRECT = True
+X_FRAME_OPTIONS = 'DENY'
+SECURE_HSTS_SECONDS = 3600
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_PRELOAD = True
 
 
 ALLOWED_HOSTS = []
