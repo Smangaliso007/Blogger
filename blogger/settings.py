@@ -39,7 +39,7 @@ SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 SECURE_HSTS_PRELOAD = True
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['thebox-blog.herokuapp.com']
 
 # Application definition
 
