@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>The Box -Blog Trial 2</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- W3 Schools CSS -->
+    <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../../static/css/scrolling-nav.css" rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="../../static/css/fontawesome-free/css/all.css" rel="stylesheet">
+
+    <!-- Carousel By Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <!-- Author CSS && JS -->
+    <link rel="stylesheet" href="../../static/css/box-blog.css">
+    <script src="../../static/js/box-blogger.js"></script>
+
+    <!-- Trial Scripts -->
+    <script src="../../static/js/scraps.js"></script>
+
+</head>
+
+<body id="page-top">
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-white text-black-50 fixed-top" id="mainNav"
+     style="background-image: linear-gradient(to right, #001421, #437cd9);font-size: 15px;height: 50px;padding: 0;margin-bottom: 0;border: none;">
+    <div class="container-fluid" >
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+            <img src="../../static/images/Logo.png" alt="logo" height="20" width="60"/>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-nav mr-auto"  id="empty_space" style="width: 83%;">
+            <li class="nav-item"></li>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarResponsive" style="width: 25%;padding: 0;margin-left: auto;">
+            <ul class="navbar-nav">
+                <li class="nav-item" style="margin-left: 150px;padding-top: 10px;">
+                    <a class="nav-link js-scroll-trigger text-white" href="#about">Home</a>
+                </li>
+                <li class="nav-item ml-2" style="padding-top: 10px;">
+                    <a class="nav-link js-scroll-trigger text-white" href="#contact">About</a>
+                </li>
+                <li class="nav-item ml-4">
+                    <a class="nav-link js-scroll-trigger" href="#contact">
+                        <img src="../../static/images/Folder.jpg" alt="play_face" height="35" width="35"
+                             style="display: block;border-radius: 50%;"/>
+                        <!-- Play -->
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Player -->
+<section id="play_me" style="display: none; background-image: inherit;padding-top: 0;padding-bottom: 0;height:400px;">
+    <div class="container-fluid" id="img_mine" style="padding: 0;">
+        <div id="animate">
+            <img src="../../static/images-2/chet.jpg" id="nxt" alt="back-image" style="display: block;height: 400px;width: 100%;position: absolute;"/>
+        </div>
+
+        <!-- Carousel Sliding -->
+        <div class="container-fluid mx-auto" style="background-color: inherit;height: 400px;padding: 0;">
+            <div id="myCarousel" class="carousel slide mx-auto" style="width: inherit;height: inherit;padding-top: 40px;">
+                <!-- Indicators -->
+
+                <ol class="carousel-indicators">
+                    <li class="item1"></li>
+                    <li class="item2"></li>
+                    <li class="item3"></li>
+                    <li class="item4"></li>
+
+                </ol>
+
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner mx-auto" style="width: 200px;border-radius: 50%;border-style: double;border-color: white;">
+                    <div class="item active">
+                        <img src="../../static/images/chet-faker-art.jpg" alt="chet" style="border-radius: 50%;height: 200px;width: 200px;"/>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Chet Faker</h5>
+                            <p>Gold</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="../../static/images/Folder.jpg" alt="cole" style="border-radius: 50%;height: 200px;width: 200px;"/>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>J-Cole</h5>
+                            <p>Revenge of the Dreamers</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="../../static/images/AlbumArtSmall.jpg" alt="cole_2" style="border-radius: 50%;height: 200px;width: 200px;"/>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>J-Cole</h5>
+                            <p>Friday Night Lights</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Buttons -->
+                <div class="container-fluid ml-auto" style="background: rgba(0, 0, 0, 0.3);width: 50%;padding-top: 40px;border-radius: 25px;">
+                    <div class="row ml-5" style="width: 88%">   <!-- Time Display -->
+                        <div class="col-sm-auto text-white">
+                            <p id="time_1">
+                                0:00
+                            </p>
+                        </div>
+                        <div class="col-sm-auto text-white ml-auto">
+                            <p id="time_2">
+                                0:00
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row ml-5" style="width: 88%;">
+                        <div class="col-sm-12" style="background: rgba(255, 255, 255, 0.5);border-radius: 25px;padding: 0;">
+                            <div id="mover">
+                                <div id="ran" style="display: none;width: 10px;height: 10px;background: rgba(255, 0, 0, 0.9);"> </div>
+                            </div>
+                        </div>
+                    </div> <!-- Moving DOt Indicator -->
+                    <div class="row ml-4" style="color: black;">
+                        <audio preload="metadata" class="song">
+                            <source src="https://s21.aconvert.com/convert/p3r68-cdx67/o3hgp-ddxe5.mp3" type="audio/mpeg">
+                        </audio>
+                        <audio preload="metadata" class="song">
+                            <source src="https://s21.aconvert.com/convert/p3r68-cdx67/vjzme-v2nql.mp3" type="audio/mpeg">
+                        </audio>
+                        <audio preload="metadata" class="song">
+                            <source src="https://s21.aconvert.com/convert/p3r68-cdx67/aykuc-1hyc8.mp3" type="audio/mpeg">
+                        </audio>
+                        <div class="col-lg-2" id="prev">
+                            <button id="prev-buton" type="button" style="background-color: inherit;border: none;padding-left: 0;">
+                                <i class="fas fa-fast-backward" style="font-size: 30px;"></i>
+                            </button> <!-- Previous -->
+                        </div>
+                        <div class="col-lg-2 ml-auto" id="prev_5">
+                            <button id="fst_prev-buton" type="button" style="background-color: inherit;border: none;">
+                                <i class="fas fa-step-backward" style="font-size: 30px;"></i>
+                            </button>
+                        </div>
+                        <div class="col-lg-2 ml-auto" id="play-pause">
+                            <button  id="play-buton" type="button" style="background-color: inherit;border: none;display: block;">
+                                <i class="fas fa-play" id="play" style="display: block;font-size: 30px"></i>
+                            </button> <!-- Play -->
+                            <button id="pause-buton" type="button" style="background-color: inherit;border: none;display: none;">
+                                <i class="fas fa-pause" id="pause" style="display: none;font-size: 30px"></i>
+                            </button> <!-- Pause -->
+                        </div>
+                        <div class="col-lg-2 ml-auto" id="fwd_5">
+                            <button id="fst_next-buton" type="button" style="background-color: inherit;border: none;">
+                                <i class="fas fa-step-forward" style="font-size: 30px;"> </i>
+                            </button>
+                        </div>
+                        <div class="col-lg-2 ml-auto" id="next">
+                            <button id="next-buton" type="button" style="background-color: inherit;border: none">
+                                <i class="fas fa-fast-forward" style="font-size: 30px"></i>
+                            </button> <!-- Next -->
+                        </div>
+                    </div> <!-- Button Row -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+</section>
+
+<!-- Animation to Player -->
+<section id="new_me" style="height: 100px;margin: 0;padding: 0;position: relative;opacity: 0.7;background-color: whitesmoke;">
+    <div class="container-fluid" style="position: absolute;">
+        <div class="row">
+            <div id="some_line" style="position: absolute; width: 80%;height: 10px;margin-top: 40px;margin-left: 140px;border-radius: 25px 25px 25px 25px;">
+
+            </div>
+
+            <div id="funimate_block" style="margin: auto;position: relative;border: 5px solid aquamarine;border-radius: 25px 25px 25px 25px;">
+                <button id="funimation" style="margin: auto;background-color: floralwhite;width: 100%;height: 100%;border: hidden;border-radius: inherit;">
+                    <h3>Play The Box</h3>
+                </button>
+            </div>
+            </div>
+        </div>
+
+
+
+</section>
+
+
+<!-- News Section -->
+<section id="about" style="background-color: #373b41;padding-top: 20px;padding-bottom: 0;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6" >
+                <div class="row">
+                    <img src="../../static/images/nipsey.jpg" style="width: 500px;height: 700px;"/></div>
+                <p>credit: source</p>
+            </div>
+            <div class="col-lg-6 text-center" style="padding-left: 30px;">
+                <h2>Is it wrong to support an artist when they’ve passed? A personal take inspired by the death of Nipsey Hussle?</h2>
+                <p class="lead">Editors Note here.</p>
+
+                <hr>
+
+                <p>Almost every time an artist dies their music spikes. This normally gives rise to the “holders of wisdom” to rant about the
+                    trend of the artist just because they are now gone. In the midst of quotes such as, “Don’t send me flowers once I’m dead”
+                    listening to an artist after their death or being sad on your posts can showcase you as a fake person to your peers or as
+                    I would say a chaser of clout. </p>
+                <br>
+
+                <p>Before going forward I want to state my cluelessness on the above then I’ll work from there. Firstly it is possible to
+                    acknowledge the work of art of a musician without being a die-hard fan and being hurt when that musician loses his/her life.
+                    For one, Nipsey Hussle who passed away on the 31st of March 2019 (may his soul rest in peace) wasn’t really a mainstream artist
+                    although he did offer quality music but his work outside of music was bigger and for that he’s garnered fans outside of music.
+                    For those that didn’t know about him now they should know – his documentary about Dr Sebi, his influence on black empowerment,
+                    investing in your hometown and his incredible run in the music industry including his debut album, Victory Lap. Now I don’t know
+                    Nipsey Hussle and nor am I speaking for him but is that not where he wanted to be – for all his work to be shown to the world?
+                    It’s only sad that it happened under these circumstances but this is the only way to spread his legacy now that he's gone. </p>
+
+                <br>
+
+                <p>If I’m doing humane work and I die without receiving a big platform to showcase it, it being presented in my death would be a
+                    blessing because at least it’s getting out there and even in my grave I can rest assured that I’ve inspired somebody out there
+                    to carry on the work. Then why are the “holders of wisdom” quick to work their fingers to attack those that are hurt when they
+                    are supposed to be channelling that energy to continuing the man’s work. In life I’ve learnt that in such dire situations it’s
+                    not the time to pick out fakers rather to heal and continue the work where the deceased left off. Imagine having to attend to
+                    every petty thing in your life, answer me this question real quick, where would you be? </p>
+
+                <br>
+
+                <p>This is in no way a pass to only show love when a person is dead. I think everyone would appreciate being shown love while they
+                    still live and breathe, but sadly nobody wakes up thinking that the next person is going to die today. That’s why it’s good to
+                    keep your affairs on good terms because nobody can tell the future, but for those that haven’t the world isn’t over. I’m a huge
+                    believer in God hence I do think that a person’s death means protection for all they love which means that if you’re sincerely
+                    sorry or wishing that you had fixed your affairs before their death the deceased will surely hear you and should absolve you of
+                    your guilt. </p>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 text-center">
+                <button id="prev-cont" style="width: 300px;background-color: transparent;border: 5px solid aquamarine;border-radius: 25px 25px 25px 25px;"><h3>Previous_Post</h3></button>
+            </div>
+            <div class="col-sm-4">
+
+            </div>          <!-- This particularly class is waiting for an idea on COMMENTS -->
+            <div class="col-sm-4 text-center">
+                <button id="next-cont" style="width: 300px;background-color: transparent;border: none;border-radius: 25px 25px 25px 25px;"><h3>Next_Post</h3></button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="py-5 bg-dark">
+    <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+    </div>
+    <!-- /.container -->
+</footer>
+
+<!-- My song function to Indicator time -->
+
+</body>
+
+</html>

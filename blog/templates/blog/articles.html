@@ -1,0 +1,36 @@
+{% extends "blog/base.html" %}
+
+{% block title %} Articles {% endblock %}
+
+{% block body %}
+    {% for article in Articles %}
+        <li>
+            <a href="{% url 'articles' article.id %}">{{ article.Title }}, {{ article.date }}</a>
+        </li>
+    {% endfor %}
+
+{% endblock %}
+
+{%  block center %}
+    <h1>{{ Content.Title }}</h1>
+    <p>{{ Content.editors_note }}</p>
+    <hr>
+    <p>{{ Content.intro }}</p>
+    <br>
+    <p>{{ Content.para_1 }}</p>
+    <br>
+    <p>{{ Content.para_2 }}</p>
+    <br>
+    <p>{{ Content.para_3 }}</p>
+    <br>
+    <p>{{ Content.conclusion }}</p>
+    <br>
+    <p>{{ Content.Author }}</p>
+{% endblock %}
+
+{% block imagery %}
+    <!-- Now I really need to Add a MODEL for IMAGES, ATTACH THAT TO URL?? ONLY VIA JAVASCRIPT(Data-Link) -->
+    <img src="{{ Content.cover_art.url }}" alt="Cover_art" width="400" height="400"/>
+    <br>
+    <p>credit: {{ Content.art_source }}</p>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "blog/base.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block body %}
+    {% for article in Articles %}
+        <li>
+            <a href="{% url 'articles' article.id %}">{{ article.Title }}, {{ article.date }}</a>
+        </li>
+    {% endfor %}
+
+{% endblock %}
+
+{% block center %}
+    <h1>Welcome To The Box</h1>
+    <hr>
+    <p>We are delighted to have you!!!!</p>
+    <br>
+    <p>Read some Articles on your left!!!!</p>
+{% endblock %}
+
+{% block imagery %}
+    <h2>What's New with You?</h2>
+    <br>
+    <p>La di da about how we are producing new stuff in the pipeline: Include Links to DEVELOPING STUFF for COMMENTRY(fOCUS_GROUPS)</p>
+{% endblock %}
