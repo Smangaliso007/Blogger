@@ -3,12 +3,12 @@
 {% block title %} Trap {% end block %}
 
 {% block body %}
-  <h3> Trap Articles </h3>
+  <h3> {{ Center.name }} Articles </h3>
   {% for article in Articles %}
     <li> <a href="{% url 'articles' article.id %}">{{ article.Title }}, {{ article.date }}</a> </li>
 
 {% end block %}
 
 {% block center %}
-  
+  <h4> hey there pick an article </h4>
 {& end block %}
