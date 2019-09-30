@@ -49,12 +49,12 @@
             </div>
         </div>
     </nav>
-    <section id="display">
+    <section id="display" style="padding: 0;">
       <div class="container" id="welcome_container">
           <!-- Welcome Tag -->
           <div class="container text-center" id="welcome" style="background-color: 43, 103, 186;">
             <!-- Genres List of Span Links to Articles By Genre -->
-            <div class="row">
+            <div class="row" id="genre_span">
               {% for type in Genres %}
                 <span> {{ type.name }}</span>    <!-- Need to include Static Urls to Genre Generated Articles -->
               {% endfor %}
