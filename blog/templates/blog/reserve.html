@@ -24,10 +24,10 @@
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body style="background-color: #373b41;">
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-white text-black-50 fixed-top" id="mainNav"
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-white text-black-50 fixed-top" id="mainNav"
          style="background-image: linear-gradient(to right, #001421, #437cd9);font-size: 15px;height: 50px;padding: 0;margin-bottom: 0;border: none;">
-        <div class="container-fluid" >
+    <div class="container-fluid" >
             <a class="navbar-brand js-scroll-trigger" href="{% url 'index' %}">
                 <img src="{% static 'images/Logo.png' %}" alt="logo" height="20" width="60"/>
             </a>
@@ -47,31 +47,52 @@
                     </li>
                 </ul>
             </div>
-        </div>
-    </nav>
-    <section id="display">
-      <div class="container" id="welcome_container">
-          <!-- Welcome Tag -->
-          <div class="container text-center" id="welcome" style="background-color: 2B67BA;">
-            <!-- Genres List of Span Links to Articles By Genre -->
-            <div class="row">
-              {% for genre in Genres %}
-                <span> {{ genre.name }}</span>    <!-- Need to include Static Urls to Genre Generated Articles -->
-              {% endfor %}
-            </div>
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <h1> Welcome to the Box </h1>
-              </div>
-            </div>
+    </div>
+</nav>
+
+<section id="display">
+  <div class="container" id="welcome_container">
+      <!-- Welcome Tag -->
+      <div class="container text-center" id="welcome" style="background-color: 2B67BA;">
+        <!-- Genres List of Span Links to Articles By Genre -->
+        <div class="row">
+          {% for genre in Genres %}
+            <span> {{ genre.name }}</span>    <!-- Need to include Static Urls to Genre Generated Articles -->
+          {% endfor %}
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h1> Welcome to the Box </h1>
           </div>
+        </div>
+
+        </div>
 
       </div>
 
-      <!-- Content Block -->
-      {% body block %}
-      {% endblock %}
-    </section>  
+      <!-- Content Tag -->
+      <div class="container" id="content_container">
+          {% for article in Articles %}
+            <div class="row">
+              <!-- Image Block -->
+              <div class="col-lg-4 mx-auto">
+                <img src="{{ article.cover_art.url }}" alt="Cover_art" height="50px" width="70px"/>
+              </div>
+              <!-- Content Block -->
+              <div class="col-lg-8 mx-auto" style="padding: 0">
+                <h2>{{ article.Title }}</h2>
+                <hr>
+                <p>{{ article.editors_note }}</p>
+                <br>
+                <p class="lead"> {{ article.Author}}, {{ article.date }}</p>
+              </div>
+            </div>
+          {% endfor %}
+      </div>
+
+  </div>
+
+</section>
+
 
 </body>
 </html>

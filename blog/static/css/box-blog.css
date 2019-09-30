@@ -10,7 +10,27 @@
 
 }
 
+#welcome_container > .row {
+    width: 60%;
+    margin: auto;
+}
 
+#content_container > .row {
+  width: 80%;
+  margin: auto;
+}
+
+span {
+    width: 50px;
+    height: 30px;
+    margin: 10px 5px 10px 5px;
+    text: center;
+    color: white;
+}
+
+span:hover {
+  background-color: 012E6C;
+}
 
 /* This is the animation used to change the background */
 #nxt {
