@@ -6,7 +6,8 @@ from django.http import HttpResponse, Http404
 # Create your views here.
 def index(request):
     context = {
-        "Articles": Article.objects.all()
+        "Articles": Article.objects.all(),
+        "Genres": Genre.objects.all(),
         }
     return render(request, "blog/index.html", context)
 

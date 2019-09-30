@@ -18,6 +18,8 @@
 #content_container > .row {
   width: 80%;
   margin: auto;
+  background-color: 2, 41, 95;
+  border: outset;
 }
 
 span {
@@ -29,7 +31,7 @@ span {
 }
 
 span:hover {
-  background-color: 012E6C;
+  background-color: 1, 46, 108;
 }
 
 /* This is the animation used to change the background */
