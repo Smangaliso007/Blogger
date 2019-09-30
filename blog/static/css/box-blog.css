@@ -10,17 +10,25 @@
 
 }
 
+#welcome {
+    width: 100%;
+    background-color: #012E6C;
+}
+
 #genre_span {
-    width: 60%;
-    margin: auto;
-    background-color: 2, 41, 95;
+  width: 50%;
+  margin: auto;
+}
+
+#welcome_span {
+  padding-bottom: 10px;
 }
 
 #content_container > .row {
   width: 80%;
   margin-left: 20px;
   padding-bottom: 10px;
-  box-shadow: 5px 10px 10px #012E6C;
+  box-shadow: 5px 10px 10px black;
 }
 
 span {
@@ -32,7 +40,7 @@ span {
 }
 
 span:hover {
-  background-color: 1, 46, 108;
+  background-color: #02295F;
 }
 
 /* This is the animation used to change the background */

@@ -52,13 +52,16 @@
     <section id="display" style="padding: 50px;">
       <div class="container" id="welcome_container">
           <!-- Welcome Tag -->
-          <div class="container text-center" id="welcome" style="background-color: #2B67BA;">
+          <div class="container-fluid text-center" id="welcome">
             <!-- Genres List of Span Links to Articles By Genre -->
             <div class="row" id="genre_span">
               {% for type in Genres %}
                 <span> {{ type.name }}</span>    <!-- Need to include Static Urls to Genre Generated Articles -->
               {% endfor %}
             </div>
+          </div>
+          <!-- welcome tag -->
+          <div class="container" id="welcome_span">
             <div class="row">
               <div class="col-lg-8 mx-auto">
                 <h1> Welcome to the Box </h1>
