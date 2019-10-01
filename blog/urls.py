@@ -3,5 +3,6 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path("<int:article_id>", views.reader, name='articles')
+    path("articles/<int:article_id>", views.reader, name='articles'),
+    path("articles/(?P<genre_name>\w+)", views.genres, name='genres'),
     ]

@@ -24,15 +24,15 @@ def reader(request, article_id):
         }
     return render(request, "blog/articles.html", context)
 
-def genres(request, genre_id):
+def genres(request, genre_name):
     try:
-        genre = Genre.objects.get(pk=genre_id)
+        genre = Genre.objects.get(genre_name)
     except Genre.DoesNotExist:
         raise Http404("Oops Something went wrong. Please wait a momemnt and try again later")
     context = {
-    "Articles": Article.objects.query.filterby('Genre.id'),
+    "Articles": Article.objects.query.filterby('genre'),
     "Genres": Genre.objects.all(),
-    "Center": genre,
+    "center": genre,
 
     }
-    return render(request, "blog/trap.html", context)
+    return render(request, "blog/Genres.html", context)

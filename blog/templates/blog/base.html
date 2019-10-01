@@ -56,7 +56,7 @@
             <!-- Genres List of Span Links to Articles By Genre -->
             <div class="row" id="genre_span">
               {% for type in Genres %}
-                <span> {{ type.name }}</span>    <!-- Need to include Static Urls to Genre Generated Articles -->
+                <span><a href="{% url 'genres' genre_name=genre.name %}"/> {{ type.name }}</span> 
               {% endfor %}
             </div>
           </div>
