@@ -26,7 +26,7 @@ def reader(request, article_id):
 
 def genres(request, genre_name):
     try:
-        genre = Genre.objects.all().filter(name=genre_name)
+        genre = Genre.objects.get(name=genre_name)
     except Genre.DoesNotExist:
         raise Http404("Oops Something went wrong. Please wait a momemnt and try again later")
     context = {
