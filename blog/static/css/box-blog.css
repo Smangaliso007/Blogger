@@ -45,13 +45,6 @@ span {
     color: white;
 }
 
-span {
-  background: linear-gradient(to right, #E5FFFF, #00FFFF);
-  background: -webkit-linear-gradient(to right, #E5FFFF, #00FFFF);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 span:hover {
   background-color: #02295F;
 }
