@@ -21,7 +21,7 @@
     <!-- Author CSS -->
     <link rel="stylesheet" href="{% static 'css/box-blog.css' %}">
     <!-- Title -->
-    <title>{% block title %}{% endblock %}</title>
+    <title>{% block title %}{% end block %}</title>
 </head>
 <body style="background-color: #373b41;">
     <!-- Navigation -->
@@ -57,14 +57,14 @@
             <div class="row" id="genre_span">
               {% for type in Genres %}
                 <span class="strong"><a href="{% url 'genres' type.name %}"/> {{ type.name }}</span>
-              {% endfor %}
+              {% end for %}
             </div>
           </div>
       </div>
 
       <!-- Content Block -->
       {% block body %}
-      {% endblock %}
+      {% end block %}
     </section>
 
 </body>
