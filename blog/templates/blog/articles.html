@@ -7,8 +7,8 @@
     <!-- Here The CONTENT Row -->
     <div class="row">
       <!-- The List for All Articles -->
-      <div class="col-lg-4">
-        <h3>All Articles</h3>
+      <div class="col-lg-4 mx-auto" style="padding-left: 15px;">
+        <h2>All Articles</h2>
         <hr>
         <div class="container-fluid">
           {% for article in Articles %}
@@ -17,7 +17,7 @@
                 <img src="{{ article.cover_art.url }}" alt="cover_art" height="150px" width="150px"/>
               </div>
               <div class="col-sm-8">
-                <h4>{{ article.Title }}</h4>
+                <h4><a href="{% url 'articles' article.id %}">{{ article.Title }}</a></h4>
                 <br>
                 <p> {{ article.editors_note }} </p>
                 <p> {{ article.Author }}, {{ article.date }} </p>
