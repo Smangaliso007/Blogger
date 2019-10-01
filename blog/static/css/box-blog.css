@@ -37,7 +37,7 @@
   box-shadow: 5px 15px 10px black;
 }
 
-#welcome_container > span {
+span {
     width: 60px;
     height: 30px;
     margin: 0 5px 0 5px;
@@ -45,7 +45,7 @@
     color: white;
 }
 
-#welcome_container > span:hover {
+span:hover {
   background-color: #02295F;
 }
 
