@@ -1,6 +1,6 @@
 {% extends "blog/base.html" %}
 
-{% block title %} {{ genre_name }} {% end block %}
+{% block title %} {{ genre_name }} {% endblock %}
 
 {% block body %}
   {% if genre %}
@@ -57,4 +57,4 @@
     {% with genre_name as None %}
       {% include "blog/Oops.html" %}
   {% endif %}
-{% end block %}
+{% endblock %}
