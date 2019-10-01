@@ -10,7 +10,7 @@ def index(request):
         "Genres": Genre.objects.all(),
         }
 
-    return render(request, "blog/index.html", context, get_absolute_url)
+    return render(request, "blog/index.html", context)
 
 def reader(request, article_id):
     try:
@@ -23,7 +23,7 @@ def reader(request, article_id):
         "Content": article,
         }
 
-    return render(request, "blog/articles.html", context, get_absolute_url)
+    return render(request, "blog/articles.html", context)
 
 def genres(request, genre_id):
     try:
@@ -37,4 +37,4 @@ def genres(request, genre_id):
 
     }
 
-    return render(request, "blog/Genres.html", context, get_absolute_url)
+    return render(request, "blog/Genres.html", context)
