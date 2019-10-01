@@ -9,14 +9,10 @@ def index(request):
         "Articles": Article.objects.all(),
         "Genres": Genre.objects.all(),
         }
-        def get_absolute_url():
-            return reverse('index')
-
-    return render(request, "blog/index.html", context, get_absolute_url)
-
     def get_absolute_url():
         return reverse('index')
 
+    return render(request, "blog/index.html", context, get_absolute_url)
 
 def reader(request, article_id):
     try:
@@ -28,8 +24,8 @@ def reader(request, article_id):
         "Genres": Genre.objects.all(),
         "Content": article,
         }
-        def get_absolute_url():
-            return reverse('index')
+    def get_absolute_url():
+        return reverse('articles')
 
     return render(request, "blog/articles.html", context, get_absolute_url)
 
@@ -45,6 +41,6 @@ def genres(request, genre_id):
 
     }
     def get_absolute_url():
-        return reverse('index')
+        return reverse('genres')
 
     return render(request, "blog/Genres.html", context, get_absolute_url)
