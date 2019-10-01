@@ -5,6 +5,14 @@
 {% endblock %}
 
 {% block body %}
+<!-- welcome tag -->
+<div class="container" id="welcome_span">
+  <div class="row">
+    <div class="col-lg-8 mx-auto">
+      <h1> Welcome to the Box </h1>
+    </div>
+  </div>
+</div>
 <!-- Content Tag -->
 <div class="container" id="content_container">
     {% for article in Articles %}
@@ -15,7 +23,7 @@
         </div>
         <!-- Content Block -->
         <div class="col-lg-8 mx-auto" style="padding: 0">
-          <h2>{{ article.Title }}</h2>
+          <h2><a href="{% url 'articles' article.id %}">{{ article.Title }}</a></h2>
           <hr>
           <p>{{ article.editors_note }}</p>
           <br>
@@ -26,4 +34,3 @@
 </div>
 
 {% endblock %}
-  

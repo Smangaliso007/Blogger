@@ -19,7 +19,8 @@ def reader(request, article_id):
         raise Http404("Oops Something went wrong. Please wait a moment and try again Later")
     context = {
         "Articles": Article.objects.all(),
-        "Content": article
+        "Genres": Genre.objects.all(),
+        "Content": article,
         }
     return render(request, "blog/articles.html", context)
 

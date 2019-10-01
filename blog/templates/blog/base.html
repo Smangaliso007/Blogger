@@ -26,7 +26,7 @@
 <body style="background-color: #373b41;">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-white text-black-50 fixed-top" id="mainNav"
-         style="background-image: linear-gradient(to right, #001421, #437cd9);font-size: 15px;height: 40px;padding: 0;margin-bottom: 0;border: none;">
+         style="background-image: linear-gradient(to right, #001421, #437cd9);font-size: 15px;height: 35px;padding: 0;margin-bottom: 0;border: none;">
         <div class="container-fluid" >
             <a class="navbar-brand js-scroll-trigger" href="{% url 'index' %}">
                 <img src="{% static 'images/Logo.png' %}" alt="logo" height="20" width="60"/>
@@ -39,10 +39,10 @@
             </div>
             <div class="collapse navbar-collapse" id="navbarResponsive" style="width: 25%;padding: 0;margin-left: auto;">
                 <ul class="navbar-nav">
-                    <li class="nav-item" style="margin-left: 150px;padding-top: 10px;">
+                    <li class="nav-item" style="margin-left: 150px;padding-top: 5px;">
                         <a class="nav-link js-scroll-trigger text-white" href="{% url 'index' %}">Home</a>
                     </li>
-                    <li class="nav-item ml-2" style="padding-top: 10px;">
+                    <li class="nav-item ml-2" style="padding-top: 5px;">
                         <a class="nav-link js-scroll-trigger text-white" href="#contact">About</a>
                     </li>
                 </ul>
@@ -60,15 +60,6 @@
               {% endfor %}
             </div>
           </div>
-          <!-- welcome tag -->
-          <div class="container" id="welcome_span">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <h1> Welcome to the Box </h1>
-              </div>
-            </div>
-          </div>
-
       </div>
 
       <!-- Content Block -->
