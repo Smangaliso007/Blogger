@@ -50,18 +50,14 @@
         </div>
     </nav>
     <section id="display" style="padding-top: 35px;">
-      <div class="container-fluid" id="welcome_container">
-          <!-- Welcome Tag -->
-          <div class="container-fluid text-center" id="welcome">
-            <!-- Genres List of Span Links to Articles By Genre -->
-            <div class="row" id="genre_span">
+      <div class="container-fluid" id="genre_container">
+          <!-- Genre Tag -->
+          <div class="row" id="genre_span">
               {% for type in Genres %}
-                <span><a href="{% url 'genres' type.id %}"/> {{ type.name }}</span>
+                <div class="span"><a href="{% url 'genres' type.id %}"/> {{ type.name }}</div>
               {% endfor %}
-            </div>
           </div>
       </div>
-
       <!-- Content Block -->
       {% block body %}
       {% endblock %}
