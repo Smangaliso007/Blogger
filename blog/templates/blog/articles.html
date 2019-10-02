@@ -1,36 +1,60 @@
 {% extends "blog/base.html" %}
 
-{% block title %} Articles {% endblock %}
+{% block title %} {{Content.Title}} {% endblock %}
 
 {% block body %}
-    {% for article in Articles %}
-        <li>
-            <a href="{% url 'articles' article.id %}">{{ article.Title }}, {{ article.date }}</a>
-        </li>
-    {% endfor %}
+  <div class="container-fluid" style="padding: 0;">
+    <!-- Here The CONTENT Row -->
+    <div class="row">
+      <!-- The List for All Articles -->
+      <div class="col-lg-4 mx-auto" style="padding-left: 15px;">
+        <div class="container">
+          <div class="row" style="width: 50%; margin: auto;">
+            <h2>All Articles</h2>
+            <hr>
+          </div>
+        </div>
+        <div class="container-fluid">
+          {% for article in Articles %}
+            <div class="row" id="list_articles">
+              <div class="col-sm-4">
+                <img src="{{ article.cover_art.url }}" alt="cover_art" height="80px" width="80px"/>
+              </div>
+              <div class="col-sm-8">
+                <h4><a href="{% url 'articles' article.id %}">{{ article.Title }}</a></h4>
+                <br>
+                <p> {{ article.editors_note }} </p>
+                <p> {{ article.Author }}, {{ article.date }} </p>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
 
-{% endblock %}
+      </div>
+      <!-- The DISPLAY for the Article Instances == Using VAR=CONTENT -->
+      <div class="col-lg-8">
+        <h1>{{ Content.Title }}</h1>
+        <p class="lead">{{ Content.editors_note }}</p>
+        <hr>
+        <p>{{ Content.intro }}</p>
+        <br>
+        <p>{{ Content.para_1 }}</p>
+        <br>
+        <p>{{ Content.para_2 }}</p>
+        <br>
+        <p>{{ Content.para_3 }}</p>
+        <br>
+        <p>{{ Content.conclusion }}</p>
+        <br>
+        <p>Author:{{ Content.Author }}</p>
 
-{%  block center %}
-    <h1>{{ Content.Title }}</h1>
-    <p>{{ Content.editors_note }}</p>
-    <hr>
-    <p>{{ Content.intro }}</p>
-    <br>
-    <p>{{ Content.para_1 }}</p>
-    <br>
-    <p>{{ Content.para_2 }}</p>
-    <br>
-    <p>{{ Content.para_3 }}</p>
-    <br>
-    <p>{{ Content.conclusion }}</p>
-    <br>
-    <p>{{ Content.Author }}</p>
-{% endblock %}
-
-{% block imagery %}
-    <!-- Now I really need to Add a MODEL for IMAGES, ATTACH THAT TO URL?? ONLY VIA JAVASCRIPT(Data-Link) -->
-    <img src="{{ Content.cover_art.url }}" alt="Cover_art" width="400" height="400"/>
-    <br>
-    <p>credit: {{ Content.art_source }}</p>
+      </div>
+    </div>
+    <!-- Here Buttons for Previous and Next
+    <div class="row">
+      <span> Previous </span>
+      <span> Next </span>
+    </div>
+    -->
+  </div>
 {% endblock %}

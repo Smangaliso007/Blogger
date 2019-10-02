@@ -10,7 +10,45 @@
 
 }
 
+#genre_container {
+  padding: 0;
+  background-color: #043983;
+  opacity: .6;
+}
 
+#genre_span {
+  width: 50%;
+  margin: auto;
+}
+
+#welcome_span {
+  padding-bottom: 30px;
+}
+
+#content_container > .row {
+  width: 100%;
+  margin-left: 20px;
+  padding-bottom: 15px;
+  box-shadow: 5px 15px 10px black;
+}
+
+.span {
+    width: 60px;
+    height: 30px;
+    margin: 0 5px 0 5px;
+    text: center;
+    color: white;
+}
+
+.span:hover {
+  background-color: #02295F;
+}
+
+#list_articles {
+  margin-left: 5px;
+  padding-bottom: 5px;
+  box-shadow: 3px 7px 10px black;
+}
 
 /* This is the animation used to change the background */
 #nxt {
@@ -36,11 +74,19 @@ h3 {
 
 }
 
-h1, h2 {
+h1 {
+    font-size: 40px;
     background: linear-gradient(to right, #E5FFFF, #00FFFF);
     background: -webkit-linear-gradient(to right, #E5FFFF, #00FFFF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  background: linear-gradient(to right, #E5FFFF, #00FFFF);
+  background: -webkit-linear-gradient(to right, #E5FFFF, #00FFFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 p {
