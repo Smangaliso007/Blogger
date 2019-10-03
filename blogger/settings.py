@@ -133,8 +133,8 @@ STATIC_ROOT = os.path.join(parent_dir, 'staticfiles')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = ()
 
-MEDIA_ROOT = os.path.join(STATIC_URL, 'MEDIA/')
-MEDIA_URL = '/MEDIA/covers/'
+MEDIA_ROOT = os.path.join(parent_dir, 'Media')
+MEDIA_URL = '/Media/'
 # Heroku: Update database configuration from $DATABASE_URL.
 
 db_from_env = dj_database_url.config(conn_max_age=500)
