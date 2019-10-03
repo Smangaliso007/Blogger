@@ -133,7 +133,7 @@ STATIC_ROOT = os.path.join(parent_dir, 'staticfiles')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = ()
 
-MEDIA_ROOT = os.path.join(parent_dir, 'staticfiles/static/MEDIA/')
+MEDIA_ROOT = os.path.join(STATIC_URL, 'MEDIA/')
 MEDIA_URL = '/staticfiles/static/MEDIA'
 # Heroku: Update database configuration from $DATABASE_URL.
 
