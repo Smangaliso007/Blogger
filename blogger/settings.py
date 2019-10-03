@@ -130,9 +130,10 @@ USE_TZ = True
 
 # The absolute path to the directory where collectstatic will collect static files for deployment.
 STATIC_ROOT = os.path.join(parent_dir, 'staticfiles')
+STATIC_URL = '/static/'
 STATICFILES_DIRS = ()
 
-MEDIA_ROOT = os.path.join(STATIC_ROOT, 'MEDIA/')
+MEDIA_ROOT = os.path.join(STATIC_URL, 'MEDIA/')
 MEDIA_URL = '/MEDIA/'
 # Heroku: Update database configuration from $DATABASE_URL.
 
