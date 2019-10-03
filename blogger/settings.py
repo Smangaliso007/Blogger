@@ -15,7 +15,7 @@ import dj_database_url
 import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-parent_dir = os.path.abspath(os.path.dirname(__file__) + '/..')
+BASE_DIR = os.path.abspath(os.path.dirname(__file__) + '/..')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
@@ -130,11 +130,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 # The absolute path to the directory where collectstatic will collect static files for deployment.
-STATIC_ROOT = os.path.join(parent_dir, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = ()
 
-MEDIA_ROOT = os.path.join(parent_dir, 'Media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'Media')
 MEDIA_URL = '/Media/'
 # Heroku: Update database configuration from $DATABASE_URL.
 
