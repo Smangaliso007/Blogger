@@ -15,8 +15,6 @@ import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 parent_dir = os.path.abspath(os.path.dirname(__file__) + '/..')
-MEDIA_ROOT = os.path.join(parent_dir, 'MEDIA/')
-MEDIA_URL = '/MEDIA/'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
@@ -139,6 +137,8 @@ STATICFILES_DIRS = [
     ]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+MEDIA_ROOT = os.path.join(STATIC_URL, 'MEDIA/')
+MEDIA_URL = '/MEDIA/'
 # Heroku: Update database configuration from $DATABASE_URL.
 
 db_from_env = dj_database_url.config(conn_max_age=500)
