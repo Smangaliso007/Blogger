@@ -25,7 +25,7 @@ class Article(models.Model):
     para_2 = models.CharField(max_length=750, null=True)
     para_3 = models.CharField(max_length=750, null=True)
     conclusion = models.CharField(max_length=500, null=True)
-    cover_art = models.ImageField(upload_to=settings.MEDIA_URL + 'covers', blank=True, help_text="Please Include an image (*.png, *.jpeg")
+    cover_art = models.ImageField(upload_to='covers/', blank=True, help_text="Please Include an image (*.png, *.jpeg")
     art_source = models.CharField(max_length=256, null=True)
     Author = models.ForeignKey('Author', on_delete=models.CASCADE, null=True)
     date = models.DateField(null=True)
