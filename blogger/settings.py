@@ -14,6 +14,8 @@ import os
 import dj_database_url
 import django_heroku
 
+
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.abspath(os.path.dirname(__file__) + '/..')
 
@@ -143,7 +145,6 @@ MEDIA_URL = '/Media/'
 # Heroku: Update database configuration from $DATABASE_URL.
 
 db_from_env = dj_database_url.config(conn_max_age=500)
-
 DATABASES['default'].update(db_from_env)
 
 #Change LOGGING to see more about SERVER ERROR
