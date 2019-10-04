@@ -31,6 +31,8 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '1+f&5y@+q@ntek!%*sr14ised=_p!3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+DEBUG_PROPAGATE_EXCEPTIONS = True
+
 SECURE_CONTENT_TYPE_NOSNIFF = True
 SECURE_BROWSER_XSS_FILTER = True
 SECURE_SSL_REDIRECT = True
