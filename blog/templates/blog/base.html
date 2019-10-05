@@ -8,18 +8,18 @@
 
     {% load staticfiles %}
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="{% static 'static/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 
     <!-- W3 Schools CSS -->
     <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="{% static 'static/css/scrolling-nav.css' %}">
-    <link rel="stylesheet" href="{% static 'static/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/scrolling-nav.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 
     <!-- Author CSS -->
-    <link rel="stylesheet" href="{% static 'static/css/box-blog.css' %}">
+    <link rel="stylesheet" href="{% static 'css/box-blog.css' %}">
     <!-- Title -->
     <title>{% block title %}{% endblock %}</title>
 </head>
@@ -29,7 +29,7 @@
          style="background-image: linear-gradient(to right, #001421, #437cd9);font-size: 15px;height: 35px;padding: 0;margin-bottom: 0;border: none;">
         <div class="container-fluid" >
             <a class="navbar-brand js-scroll-trigger" href="{% url 'index' %}">
-                <img src="{% static 'static/images/Logo.png' %}" alt="logo" height="20" width="60"/>
+                <img src="{% static 'images/Logo.png' %}" alt="logo" height="20" width="60"/>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
