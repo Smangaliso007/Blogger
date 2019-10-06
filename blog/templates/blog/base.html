@@ -24,8 +24,8 @@
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body style="background-color: #373b41;">
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-white text-black-50 fixed-top" id="mainNav"
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-white text-black-50 fixed-top" id="mainNav"
          style="background-image: linear-gradient(to right, #001421, #437cd9);font-size: 15px;height: 35px;padding: 0;margin-bottom: 0;border: none;">
         <div class="container-fluid" >
             <a class="navbar-brand js-scroll-trigger" href="{% url 'index' %}">
@@ -49,19 +49,24 @@
             </div>
         </div>
     </nav>
-    <section id="display" style="padding-top: 35px;">
-      <div class="container-fluid" id="genre_container">
-          <!-- Genre Tag -->
-          <div class="row" id="genre_span">
-              {% for type in Genres %}
-                <div class="span"><a href="{% url 'genres' type.id %}"/> {{ type.name }}</div>
-              {% endfor %}
-          </div>
-      </div>
-      <!-- Content Block -->
-      {% block body %}
-      {% endblock %}
-    </section>
+<section id="genres_links" style="padding-top: 35px;">
+  <div class="container-fluid" id="genre_container">
+    <!-- Genre Tag -->
+    <div class="row" id="genre_span">
+        {% for type in Genres %}
+          <div class="span"><a href="{% url 'genres' type.id %}"/> {{ type.name }}</div>
+        {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="display"style="padding-top: 0;">
+<!-- Content Block -->
+{% block body %}
+  
+{% endblock %}
+
+</section>
 
 </body>
 </html>
