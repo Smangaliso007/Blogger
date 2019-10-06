@@ -54,7 +54,7 @@
     <!-- Genre Tag -->
     <div class="row" id="genre_span">
         {% for type in Genres %}
-          <div class="span"><a href="{% url 'genres' type.id %}"/> {{ type.name }}</div>
+          <a href="{% url 'genres' type.id %}"> {{ type.name }}</a>
         {% endfor %}
     </div>
   </div>
