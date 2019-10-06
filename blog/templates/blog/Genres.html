@@ -17,10 +17,10 @@
           <!-- Side View -->
           <div class="col-lg-4">
             <!-- Genre Articles -->
-            <div class="container">
+            <div class="container" style="padding: 0;">
               {% for article in Articles %}
               <div class="row" id="list_articles">
-                <div class="col-sm-4">
+                <div class="col-sm-4" style="padding: 0;">
                   <img src="{{ article.cover_art.url }}" alt="cover_art" height="150px" width="150px"/>
                 </div>
                 <div class="col-sm-8">
