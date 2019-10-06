@@ -98,9 +98,13 @@ WSGI_APPLICATION = 'blogger.wsgi.application'
 
 DATABASES = {
     'default': {
-    'ENGINE': 'django.db.backends.sqlite3',
-    'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd8m52ls12sbs1p',
+        'USER': 'gsacrmqhwfhhuy',
+        'PASSWORD': '736eb11eaa147558597bf47739319212e2acf89621009a29cbdb7bd0912e0b12',
+        'HOST': 'ec2-23-21-94-99.compute-1.amazonaws.com',
+        'PORT': '5432',
+    }}
 }
 
 # Password validation
@@ -151,10 +155,6 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'Media')
 MEDIA_URL = '/Media/'
-# Heroku: Update database configuration from $DATABASE_URL.
-
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
 
 #Change LOGGING to see more about SERVER ERROR
 LOGGING = {
