@@ -10,6 +10,10 @@
 
 }
 
+img {
+  position: relative;
+}
+
 #genre_container {
   padding: 0;
   background-color: #043983;
@@ -17,12 +21,14 @@
 }
 
 #genre_span {
+  text-align: center;
   width: 50%;
   margin: auto;
 }
 
 #welcome_span {
   padding-bottom: 30px;
+  text-align: center;
 }
 
 #content_container > .row {

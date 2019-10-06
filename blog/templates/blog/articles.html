@@ -7,7 +7,7 @@
     <!-- Here The CONTENT Row -->
     <div class="row">
       <!-- The List for All Articles -->
-      <div class="col-lg-4 mx-auto" style="padding-left: 15px;">
+      <div class="col-lg-4 mx-auto" style="padding: 0;">
         <div class="container">
           <div class="row" style="width: 50%; margin: auto;">
             <h2>All Articles</h2>
@@ -17,7 +17,7 @@
         <div class="container">
           {% for article in Articles %}
             <div class="row" id="list_articles">
-              <div class="col-sm-4">
+              <div class="col-sm-4" style="padding: 0;">
                 <img src="{{ article.cover_art.url }}" alt="cover_art" height="150px" width="150px"/>
               </div>
               <div class="col-sm-8">
