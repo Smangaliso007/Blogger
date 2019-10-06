@@ -1,0 +1,222 @@
+.classname {
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    margin: 0;
+    background: rgba(255, 0, 0, 0.6);
+    position: relative;
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+
+}
+
+#genre_container {
+  padding: 0;
+  background-color: #043983;
+  opacity: .6;
+}
+
+#genre_span {
+  width: 50%;
+  margin: auto;
+}
+
+#welcome_span {
+  padding-bottom: 30px;
+}
+
+#content_container > .row {
+  width: 100%;
+  margin-left: 20px;
+  padding-bottom: 15px;
+  box-shadow: 5px 15px 10px black;
+}
+
+.span {
+    width: 60px;
+    height: 30px;
+    margin: 0 5px 0 5px;
+    text: center;
+    color: white;
+}
+
+.span:hover {
+  background-color: #02295F;
+}
+
+#list_articles {
+  margin-left: 5px;
+  padding-bottom: 5px;
+  box-shadow: 3px 7px 10px black;
+}
+
+/* This is the animation used to change the background */
+#nxt {
+    -webkit-animation: fadeIn 2s ease-in-out;
+    animation: fadeIn 2s ease-in-out;
+}
+
+
+#nuwe {
+    -webkit-animation: fadeIn 2s ease-in-out;
+    animation: fadeIn 2s ease-in-out;
+}
+
+h3 {
+    background: linear-gradient(to right, #1464F4,#A020F0, #174038);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#some_line {
+    background: linear-gradient(to right, #1464F4,#A020F0, #1464F4);
+    background: -webkit-linear-gradient(to right, #1464F4,#A020F0, #1464F4);
+
+}
+
+h1 {
+    font-size: 40px;
+    background: linear-gradient(to right, #E5FFFF, #00FFFF);
+    background: -webkit-linear-gradient(to right, #E5FFFF, #00FFFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  background: linear-gradient(to right, #E5FFFF, #00FFFF);
+  background: -webkit-linear-gradient(to right, #E5FFFF, #00FFFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+p {
+    background: linear-gradient(to right, #E5FFFF, #00FFFF);
+    background: -webkit-linear-gradient(to right, #E5FFFF, #00FFFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+li {
+    background: linear-gradient(to right, #E5FFFF, #00FFFF);
+    background: -webkit-linear-gradient(to right, #E5FFFF, #00FFFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.carousel-indicators li { visibility: hidden; }
+
+.newone {
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    margin: 0;
+    background: rgba(255, 0, 0, 0.6);
+    position: relative;
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+
+}
+
+#funimate_block {
+    width: 200px;
+    height: 100px;
+}
+
+#funimation:focus {
+    outline: none;
+}
+
+#prev-cont:focus {
+    outline: none;
+}
+
+#next-cont:focus {
+    outline: none;
+}
+.funimation {
+    -webkit-animation: to_play 5s;
+    animation: to_play 5s;
+
+}
+
+.funmemation {
+    -webkit-animation: butons 5s;
+    animation: butons 5s;
+}
+
+@-webkit-keyframes butons {
+
+    from {
+        height: 10px;
+    }
+    to {
+        height: 300px;
+    }
+}
+
+@keyframes butons {
+
+    from {
+        height: 10px;
+    }
+    to {
+        height: 300px;
+    }
+}
+
+@-webkit-keyframes to_play {
+
+    from {
+        height: 100px;
+    }
+
+    to {
+        height: 400px;
+    }
+
+}
+
+@keyframes to_play {
+    from {
+        height: 100px;
+    }
+
+    to {
+        height: 400px;
+    }
+
+}
+
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+    from {
+        width: 0;
+        top: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Standard syntax */
+@keyframes example {
+    from {
+        width: 0;
+        top: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
