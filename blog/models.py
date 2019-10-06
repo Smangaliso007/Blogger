@@ -24,7 +24,7 @@ class Article(models.Model):
     para_1 = models.TextField(max_length=1200, null=True)
     para_2 = models.TextField(max_length=1200, null=True)
     para_3 = models.TextField(max_length=1200, null=True)
-    para_4 = mdels.TextField(null=True)
+    para_4 = models.TextField(null=True)
     conclusion = models.TextField(max_length=1000, null=True)
     cover_art = models.ImageField(default='default.png', blank=True, help_text="Please Include an image (*.png, *.jpeg")
     art_source = models.CharField(max_length=256, null=True)
