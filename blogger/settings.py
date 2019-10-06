@@ -14,7 +14,6 @@ import os
 import dj_database_url
 import django_heroku
 import psycopg2
-import DATABASE_URL
 
 
 
