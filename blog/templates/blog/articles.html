@@ -14,11 +14,11 @@
             <hr>
           </div>
         </div>
-        <div class="container-fluid">
+        <div class="container">
           {% for article in Articles %}
             <div class="row" id="list_articles">
               <div class="col-sm-4">
-                <img src="{{ article.cover_art.url }}" alt="cover_art" height="80px" width="80px"/>
+                <img src="{{ article.cover_art.url }}" alt="cover_art" height="150px" width="150px"/>
               </div>
               <div class="col-sm-8">
                 <h4><a href="{% url 'articles' article.id %}">{{ article.Title }}</a></h4>
