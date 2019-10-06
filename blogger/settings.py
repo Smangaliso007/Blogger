@@ -104,7 +104,7 @@ DATABASES = {
         'PASSWORD': '736eb11eaa147558597bf47739319212e2acf89621009a29cbdb7bd0912e0b12',
         'HOST': 'ec2-23-21-94-99.compute-1.amazonaws.com',
         'PORT': '5432',
-    }}
+    }
 }
 
 # Password validation
