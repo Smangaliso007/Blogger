@@ -27,10 +27,6 @@
   text-align: center;
 }
 
-#content_container {
-  width: 95%;
-}
-
 #content_container > .row {
   width: 100%;
   height: 200px;
