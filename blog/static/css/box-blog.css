@@ -25,6 +25,7 @@
 #welcome_span {
   padding-bottom: 30px;
   text-align: center;
+  color: floralwhite;
 }
 
 #content_container > .row {
@@ -46,7 +47,9 @@
 
 #list_articles {
   margin-left: 5px;
-  padding-bottom: 5px;
+  margin-bottom: 10px;
+  background-color: #437cd9;
+  height: 120px;
   box-shadow: 3px 7px 10px black;
   overflow: scroll;
 }
@@ -67,45 +70,10 @@
     animation: fadeIn 2s ease-in-out;
 }
 
-h3 {
-    background: linear-gradient(to right, #1464F4,#A020F0, #174038);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
 #some_line {
     background: linear-gradient(to right, #1464F4,#A020F0, #1464F4);
     background: -webkit-linear-gradient(to right, #1464F4,#A020F0, #1464F4);
 
-}
-
-h1 {
-    font-size: 40px;
-    background: linear-gradient(to right, #E5FFFF, #00FFFF);
-    background: -webkit-linear-gradient(to right, #E5FFFF, #00FFFF);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-h2 {
-  background: linear-gradient(to right, #E5FFFF, #00FFFF);
-  background: -webkit-linear-gradient(to right, #E5FFFF, #00FFFF);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-p {
-    background: linear-gradient(to right, #E5FFFF, #00FFFF);
-    background: -webkit-linear-gradient(to right, #E5FFFF, #00FFFF);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-li {
-    background: linear-gradient(to right, #E5FFFF, #00FFFF);
-    background: -webkit-linear-gradient(to right, #E5FFFF, #00FFFF);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 .carousel-indicators li { visibility: hidden; }

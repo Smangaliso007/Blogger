@@ -14,11 +14,11 @@
             <hr>
           </div>
         </div>
-        <div class="container">
+        <div class="container-fluid">
           {% for article in Articles %}
             <div class="row" id="list_articles">
               <div class="col-sm-4" style="padding: 0;">
-                <img src="{{ article.cover_art.url }}" alt="cover_art" height="150px" width="150px"/>
+                <img src="{{ article.cover_art.url }}" alt="cover_art" height="100px" width="100px"/>
               </div>
               <div class="col-sm-8">
                 <h4><a href="{% url 'articles' article.id %}">{{ article.Title }}</a></h4>
@@ -32,7 +32,7 @@
 
       </div>
       <!-- The DISPLAY for the Article Instances == Using VAR=CONTENT -->
-      <div class="col-lg-8" id="reader">
+      <div class="col-lg-8" id="reader" style="margin-top: 20px;margin-left: 25px;">
         <h1>{{ Content.Title }}</h1>
         <p class="lead">{{ Content.editors_note }}</p>
         <hr>
