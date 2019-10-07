@@ -8,7 +8,7 @@
 <!-- welcome tag -->
 <div class="container" id="welcome_span">
   <div class="row" style="width: 70%;margin: auto;">
-    <div class="col-lg-8 mx-auto">
+    <div class="col-lg-8 mx-auto text-center">
       <h1> Welcome to the Box </h1>
     </div>
   </div>
@@ -16,7 +16,7 @@
 <!-- Content Tag -->
 <div class="container-fluid" id="content_container">
     {% for article in Articles %}
-      <div class="row" style="margin-bottom: 10px;margin-top: 10px;background-color: #153f65;">
+      <div class="row" style="margin-bottom: 10px;margin-top: 10px;background-color: #437cd9;">
         <!-- Image Block -->
         <div class="col-lg-2" style="padding:0;">
           <img src="{{ article.cover_art.url }}" alt="Cover_art" height="180px" width="270px" style="position: relative;margin-left:10px;margin-top: 10px;"/>

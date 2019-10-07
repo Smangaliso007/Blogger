@@ -39,3 +39,6 @@ def genres(request, genre_id):
     }
 
     return render(request, "blog/Genres.html", context)
+
+def about(request):
+    return render(request, "blog/about.html")
