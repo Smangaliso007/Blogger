@@ -10,10 +10,6 @@
 
 }
 
-img {
-  position: relative;
-}
-
 #genre_container {
   padding: 0;
   background-color: #043983;
@@ -21,9 +17,7 @@ img {
 }
 
 #genre_span {
-  text-align: center;
   width: 50%;
-  height: 5%;
   margin: auto;
 }
 
@@ -32,10 +26,13 @@ img {
   text-align: center;
 }
 
+#content_container {
+  width: 95%;
+}
+
 #content_container > .row {
   width: 100%;
-  margin-left: 20px;
-  padding-bottom: 15px;
+  height: 200px;
   box-shadow: 5px 15px 10px black;
 }
 

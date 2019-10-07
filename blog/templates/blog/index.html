@@ -14,15 +14,15 @@
   </div>
 </div>
 <!-- Content Tag -->
-<div class="container" id="content_container">
+<div class="container-fluid" id="content_container">
     {% for article in Articles %}
       <div class="row" style="margin-bottom: 10px;margin-top: 10px;background-color: #153f65;">
         <!-- Image Block -->
-        <div class="col-lg-3" style="padding:0;">
-          <img src="{{ article.cover_art.url }}" alt="Cover_art" height="270px" width="270px" style="position: relative;margin-left:10px;margin-top: 10px;"/>
+        <div class="col-lg-2" style="padding:0;">
+          <img src="{{ article.cover_art.url }}" alt="Cover_art" height="180px" width="270px" style="position: relative;margin-left:10px;margin-top: 10px;"/>
         </div>
         <!-- Content Block -->
-        <div class="col-lg-8 mx-4" style="padding: 0">
+        <div class="col-lg-9 mx-auto" style="padding: 0">
           <h2><a href="{% url 'articles' article.id %}">{{ article.Title }}</a></h2>
           <hr>
           <p>{{ article.editors_note }}</p>
