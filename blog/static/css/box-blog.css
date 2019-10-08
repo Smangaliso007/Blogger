@@ -12,10 +12,9 @@
 
 #genre_container {
   padding: 0;
-  background-color: #437cd9;
-  opacity: .8;
+  background-color: #34486a;
+  opacity: .9;
 }
-
 #genre_span {
   width: 100%;
   margin-left: 600px;
@@ -46,16 +45,14 @@
 }
 
 #list_articles {
-  margin-left: 5px;
-  margin-bottom: 10px;
-  background-color: #437cd9;
-  height: 120px;
+  margin-bottom: 5px;
+  height: 200px;
   box-shadow: 3px 7px 10px black;
-  overflow: scroll;
+  background-color: #34486a;
 }
 
 #reader {
-  overflow: scroll;
+  background-color: #34486a;
 }
 
 /* This is the animation used to change the background */
