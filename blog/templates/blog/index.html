@@ -18,7 +18,7 @@
     {% for article in Articles %}
       <div class="row" style="margin-bottom: 10px;margin-top: 10px;background-color: #437cd9;">
         <!-- Image Block -->
-        <div class="col-lg-2" style="padding:0;">
+        <div class="col-lg-3" style="padding:0;">
           <img src="{{ article.cover_art.url }}" alt="Cover_art" height="180px" width="270px" style="position: relative;margin-left:10px;margin-top: 10px;"/>
         </div>
         <!-- Content Block -->
@@ -26,7 +26,6 @@
           <h2><a href="{% url 'articles' article.id %}">{{ article.Title }}</a></h2>
           <hr>
           <p>{{ article.editors_note }}</p>
-          <br>
           <p class="lead"> {{ article.Author}}, {{ article.date }}</p>
         </div>
       </div>
