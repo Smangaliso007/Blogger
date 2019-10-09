@@ -1,55 +1,62 @@
 {% extends "blog/base.html" %}
+{% extends "blog/base_articles" %}
 
-{% block title %} {{ genre_name }} {% endblock %}
+{% block title %} {{ center }} {% endblock %}
 
-{% block body %}
-      <div class="container-fluid" style="color: floralwhite;">
-        <div class="row">
-          <!-- Genre Title -->
-          <div class="container" style="padding: 0;">
-            <div class="row" style="width: 80%;margin: auto;">
-              <h1>{{ center }} Articles</h1>
-              <hr>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <!-- Side View -->
-          <div class="col-lg-4">
-            <!-- Genre Articles -->
-            <div class="container" style="padding: 0;">
-              {% for article in Articles %}
-              <div class="row" id="list_articles">
-                <div class="col-sm-3" style="padding: 0;">
-                  <img src="{{ article.cover_art.url }}" alt="cover_art" height="80%" width="100%" style="margin-left: 5px;margin-top: 5px;"/>
-                </div>
-                <div class="col-sm-8">
-                  <h4><a href="{% url 'articles' article.id %}">{{ article.Title }}</a></h4>
-                  <p> {{ article.editors_note }} </p>
-                  <p> {{ article.Author }}, {{ article.date }} </p>
-                </div>
-              </div>
-              {% endfor %}
-            </div>
-          </div>
-          <!-- Main View -->
-          <div class="col-lg-8">
-            <div class="container">
-              {% for article in Articles %}
-              <div class="row" id="list_articles">
-                <div class="col-sm-4">
-                  <img src="{{ article.cover_art.url }}" alt="cover_art" height="75%" width="100%" style="margin-top: 5px;"/>
-                </div>
-                <div class="col-sm-8">
-                  <h4><a href="{% url 'articles' article.id %}">{{ article.Title }}</a></h4>
-                  <br>
-                  <p> {{ article.editors_note }} </p>
-                  <p> {{ article.Author }}, {{ article.date }} </p>
-                </div>
-              </div>
-              {% endfor %}
-            </div>
-          </div>
-        </div>
+{% block center %}
+<!-- Main View -->
+<div class="col-lg-7 mx-auto">
+  <div class="row" id="all_tag" style="width: 50%; margin-left: 20px;">
+    <h2>{{ center }} Articles</h2>
+  </div>
+  <div class="container">
+    {% for article in Articles_by_Genre %}
+    <div class="row" id="list_articles">
+      <div class="col-sm-4">
+        <img src="{{ article.cover_art.url }}" alt="cover_art" height="75%" width="100%" style="margin-top: 5px;"/>
       </div>
+      <div class="col-sm-8">
+        <h4><a href="{% url 'articles' article.id %}">{{ article.Title }}</a></h4>
+        <br>
+        <p> {{ article.editors_note }} </p>
+        <p> {{ article.Author }}, {{ article.date }} </p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
 {% endblock %}
+
+
+<div class="container-fluid" style="color: floralwhite;">
+  <div class="row">
+    <!-- Genre Title -->
+    <div class="container" style="padding: 0;">
+      <div class="row" style="width: 80%;margin: auto;">
+        <h1>{{ center }} Articles</h1>
+        <hr>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <!-- Side View -->
+    <div class="col-lg-4">
+      <!-- Genre Articles -->
+      <div class="container" style="padding: 0;">
+        {% for article in Articles %}
+        <div class="row" id="list_articles">
+          <div class="col-sm-3" style="padding: 0;">
+            <img src="{{ article.cover_art.url }}" alt="cover_art" height="80%" width="100%" style="margin-left: 5px;margin-top: 5px;"/>
+          </div>
+          <div class="col-sm-8">
+            <h4><a href="{% url 'articles' article.id %}">{{ article.Title }}</a></h4>
+            <p> {{ article.editors_note }} </p>
+            <p> {{ article.Author }}, {{ article.date }} </p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
+</div>
