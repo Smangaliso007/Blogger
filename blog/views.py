@@ -32,6 +32,7 @@ def genres(request, genre_id):
     except Genre.DoesNotExist:
         raise Http404("Oops Something went wrong. Please wait a momemnt and try again later")
     context = {
+    "Articles": Article.objects.all(),
     "Articles_by_Genre": Article.objects.all().filter(Genre=genre_id),
     "Genres": Genres,
     "center": genre,
