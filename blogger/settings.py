@@ -12,9 +12,15 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 import dj_database_url
+import django_heroku
+import psycopg2
+
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-parent_dir = os.path.abspath(os.path.dirname(__file__) + '/..')
+# BASE_DIR = os.path.abspath(os.path.dirname(__file__) + '/..')
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
@@ -26,6 +32,8 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '1+f&5y@+q@ntek!%*sr14ised=_p!3
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
+
+DEBUG_PROPAGATE_EXCEPTIONS = True
 
 SECURE_CONTENT_TYPE_NOSNIFF = True
 SECURE_BROWSER_XSS_FILTER = True
@@ -74,6 +82,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
                 ],
             },
         },
@@ -86,11 +95,18 @@ WSGI_APPLICATION = 'blogger.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(parent_dir, 'db.sqlite3'),
-        }
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd8m52ls12sbs1p',
+        'USER': 'gsacrmqhwfhhuy',
+        'PASSWORD': '736eb11eaa147558597bf47739319212e2acf89621009a29cbdb7bd0912e0b12',
+        'HOST': 'ec2-23-21-94-99.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
+}
 
+DATABASE_URL = 'postgres://gsacrmqhwfhhuy:736eb11eaa147558597bf47739319212e2acf89621009a29cbdb7bd0912e0b12@ec2-23-21-94-99.compute-1.amazonaws.com:5432/d8m52ls12sbs1p'
+conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 
@@ -129,17 +145,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 # The absolute path to the directory where collectstatic will collect static files for deployment.
-STATIC_ROOT = os.path.join(parent_dir, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
-STATICFILES_DIRS = ()
 
-MEDIA_ROOT = os.path.join(parent_dir, 'staticfiles/static/MEDIA/')
-MEDIA_URL = '/staticfiles/static/MEDIA'
-# Heroku: Update database configuration from $DATABASE_URL.
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-db_from_env = dj_database_url.config(conn_max_age=500)
 
-DATABASES['default'].update(db_from_env)
+MEDIA_ROOT = os.path.join(BASE_DIR, 'Media')
+MEDIA_URL = '/Media/'
 
 #Change LOGGING to see more about SERVER ERROR
 LOGGING = {
@@ -180,3 +193,5 @@ LOGGING = {
         },
     }
 }
+
+django_heroku.settings(locals())

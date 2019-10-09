@@ -288,3 +288,34 @@
 </body>
 
 </html>
+<div class="container-fluid" style="color: floralwhite;">
+  <div class="row">
+    <!-- Genre Title -->
+    <div class="container" style="padding: 0;">
+      <div class="row" style="width: 80%;margin: auto;">
+        <h1>{{ center }} Articles</h1>
+        <hr>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <!-- Side View -->
+    <div class="col-lg-4">
+      <!-- Genre Articles -->
+      <div class="container" style="padding: 0;">
+        {% for article in Articles %}
+        <div class="row" id="list_articles">
+          <div class="col-sm-3" style="padding: 0;">
+            <img src="{{ article.cover_art.url }}" alt="cover_art" height="80%" width="100%" style="margin-left: 5px;margin-top: 5px;"/>
+          </div>
+          <div class="col-sm-8">
+            <h4><a href="{% url 'articles' article.id %}">{{ article.Title }}</a></h4>
+            <p> {{ article.editors_note }} </p>
+            <p> {{ article.Author }}, {{ article.date }} </p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>

@@ -1,60 +1,25 @@
-{% extends "blog/base.html" %}
+{% extends "blog/base_articles.html" %}
 
 {% block title %} {{Content.Title}} {% endblock %}
 
-{% block body %}
-  <div class="container-fluid" style="padding: 0;">
-    <!-- Here The CONTENT Row -->
-    <div class="row">
-      <!-- The List for All Articles -->
-      <div class="col-lg-4 mx-auto" style="padding-left: 15px;">
-        <div class="container">
-          <div class="row" style="width: 50%; margin: auto;">
-            <h2>All Articles</h2>
-            <hr>
-          </div>
-        </div>
-        <div class="container-fluid">
-          {% for article in Articles %}
-            <div class="row" id="list_articles">
-              <div class="col-sm-4">
-                <img src="{{ article.cover_art.url }}" alt="cover_art" height="80px" width="80px"/>
-              </div>
-              <div class="col-sm-8">
-                <h4><a href="{% url 'articles' article.id %}">{{ article.Title }}</a></h4>
-                <br>
-                <p> {{ article.editors_note }} </p>
-                <p> {{ article.Author }}, {{ article.date }} </p>
-              </div>
-            </div>
-          {% endfor %}
-        </div>
+{% block center %}
+<div class="col-lg-7 mx-auto" id="reader">
+  <h1>{{ Content.Title }}</h1>
+  <p class="lead">{{ Content.editors_note }}</p>
+  <hr>
+  <p>{{ Content.intro }}</p>
+  <br>
+  <p>{{ Content.para_1 }}</p>
+  <br>
+  <p>{{ Content.para_2 }}</p>
+  <br>
+  <p>{{ Content.para_3 }}</p>
+  <br>
+  <p>{{ Content.para_4 }}</p>
+  <br>
+  <p>{{ Content.conclusion }}</p>
+  <br>
+  <p>Author:{{ Content.Author }}</p>
 
-      </div>
-      <!-- The DISPLAY for the Article Instances == Using VAR=CONTENT -->
-      <div class="col-lg-8">
-        <h1>{{ Content.Title }}</h1>
-        <p class="lead">{{ Content.editors_note }}</p>
-        <hr>
-        <p>{{ Content.intro }}</p>
-        <br>
-        <p>{{ Content.para_1 }}</p>
-        <br>
-        <p>{{ Content.para_2 }}</p>
-        <br>
-        <p>{{ Content.para_3 }}</p>
-        <br>
-        <p>{{ Content.conclusion }}</p>
-        <br>
-        <p>Author:{{ Content.Author }}</p>
-
-      </div>
-    </div>
-    <!-- Here Buttons for Previous and Next
-    <div class="row">
-      <span> Previous </span>
-      <span> Next </span>
-    </div>
-    -->
-  </div>
+</div>
 {% endblock %}

@@ -7,26 +7,25 @@
 {% block body %}
 <!-- welcome tag -->
 <div class="container" id="welcome_span">
-  <div class="row">
-    <div class="col-lg-8 mx-auto">
+  <div class="row" style="width: 70%;margin: auto;">
+    <div class="col-lg-8 mx-auto text-center">
       <h1> Welcome to the Box </h1>
     </div>
   </div>
 </div>
 <!-- Content Tag -->
-<div class="container" id="content_container">
+<div class="container-fluid" id="content_container" style="width: 95%;color: floralwhite;">
     {% for article in Articles %}
-      <div class="row">
+      <div class="row" style="margin-bottom: 10px;margin-top: 10px;background-color: #437cd9;">
         <!-- Image Block -->
-        <div class="col-lg-4 mx-auto">
-          <img src="{{ article.cover_art.url }}" alt="Cover_art" height="100px" width="150px"/>
+        <div class="col-lg-3" style="padding:0;">
+          <img src="{{ article.cover_art.url }}" alt="Cover_art" height="180px" width="270px" style="position: relative;margin-left:10px;margin-top: 10px;"/>
         </div>
         <!-- Content Block -->
-        <div class="col-lg-8 mx-auto" style="padding: 0">
+        <div class="col-lg-9 mx-auto" style="padding: 0">
           <h2><a href="{% url 'articles' article.id %}">{{ article.Title }}</a></h2>
           <hr>
           <p>{{ article.editors_note }}</p>
-          <br>
           <p class="lead"> {{ article.Author}}, {{ article.date }}</p>
         </div>
       </div>

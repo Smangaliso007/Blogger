@@ -1,0 +1,39 @@
+{% extends "blog/base.html" %}
+
+{% block body %}
+  <div class="container-fluid" style="padding: 0;width: 95%;color: floralwhite;">
+    <!-- Here The CONTENT Row -->
+    <div class="row">
+      <!-- The List for All Articles -->
+      <div class="col-lg-4" style="padding: 0;">
+        <div class="row" id="all_tag" style="width: 50%; margin-left: 20px;">
+          <h2>All Articles</h2>
+        </div>
+        <div class="container-fluid">
+          {% for article in Articles %}
+            <div class="row" id="list_articles">
+              <div class="col-sm-4" style="padding: 0;">
+                <img src="{{ article.cover_art.url }}" alt="cover_art" height="80%" width="100%" style="margin-left: 5px;margin-top: 5px;"/>
+              </div>
+              <div class="col-sm-8">
+                <h4><a href="{% url 'articles' article.id %}">{{ article.Title }}</a></h4>
+                <p> {{ article.editors_note }} </p>
+                <p> {{ article.Author }}, {{ article.date }} </p>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+
+      </div>
+      <!-- The DISPLAY for the Article Instances == Using VAR=CONTENT -->
+      {% block center %}
+      {% endblock %}
+    </div>
+    <!-- Here Buttons for Previous and Next
+    <div class="row">
+      <span> Previous </span>
+      <span> Next </span>
+    </div>
+    -->
+  </div>
+{% endblock %}
