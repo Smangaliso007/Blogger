@@ -48,13 +48,20 @@
   margin-bottom: 5px;
   height: 150px;
   box-shadow: 3px 7px 10px black;
-  background-color: #34486a;
+  background-color: #437cd9;
 }
 
 #reader {
-  background-color: #34486a;
+  background-color: #437cd9;
 }
 
+#all_tag {
+  text-align: center;
+}
+
+#about_tag {
+  text-align: center;
+}
 /* This is the animation used to change the background */
 #nxt {
     -webkit-animation: fadeIn 2s ease-in-out;
