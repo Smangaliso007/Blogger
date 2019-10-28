@@ -8,8 +8,17 @@
       <div class="col-lg-4" style="padding: 0;">
         <div class="row" id="all_tag" style="width: 50%; margin-left: 20px;">
           <h2>All Articles</h2>
+          <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                {% for article in Articles %}
+                  <li><a href="{% url 'articles' article.id %}">{{ article.Title }}</a></li>
+                {% endfor %}
+              </ul>
+            </div>
         </div>
-        <div class="container-fluid">
+        <div class="container-fluid" id="base_list_articles">
           {% for article in Articles %}
             <div class="row" id="list_articles">
               <div class="col-sm-4" style="padding: 0;">

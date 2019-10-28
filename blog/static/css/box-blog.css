@@ -1,15 +1,6 @@
-.classname {
-    width: 10px;
-    height: 10px;
-    padding: 0;
-    margin: 0;
-    background: rgba(255, 0, 0, 0.6);
-    position: relative;
-    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
-    animation-name: example;
-
+.dropdown {
+  display: none;
 }
-
 #genre_container {
   padding: 0;
   background-color: #6181b0;
@@ -17,7 +8,6 @@
 }
 #genre_span {
   width: 100%;
-  margin-left: 350px;
   text-align: center;
 }
 
@@ -200,4 +190,18 @@
     to {
         width: 100%;
     }
+}
+@media only screen and (max-width: 768px) {
+  #all_tag > h1 {
+    display: none;
+  }
+  .dropdown {
+    display: block;
+  }
+  #genre_span {
+    width: 50%;
+  }
+  #base_list_articles {
+    display: none;
+  }
 }
