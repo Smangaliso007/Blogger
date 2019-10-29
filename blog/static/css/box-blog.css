@@ -1,13 +1,15 @@
-.navbar-brand {
-  padding: 0;
+#head_nav {
   margin: 0;
+  background-image: linear-gradient(to right, #15171d , #6181b0);
 }
-.navbar-collapse {
-  padding: 0;
+#genre_nav {
+  background-color: #6181b0;
+  opacity: .9;
 }
-.nav {
-  display: inline;
-  padding: 0;
+h5 {
+  font-size: 14px;
+  margin: 0;
+  color: floralwhite;
 }
 .dropdown {
   display: none;

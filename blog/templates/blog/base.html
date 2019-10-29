@@ -28,7 +28,7 @@
 </head>
 <body style="background-color: #15171d;color: floralwhite;">
 <!-- Navigation -->
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse" id="head_nav">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -40,7 +40,7 @@
         <img src="{% static 'images/Logo.png' %}" alt='Logo' height="30px" width="60px"/></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav navbar-right">
         <li class="active"><a href="/">Home</a></li>
         <li><a href="/about">About</a></li>
       </ul>
@@ -52,10 +52,10 @@
     </div>
   </div>
 </nav>
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse" id="genre_nav">
   <ul class="nav navbar-nav">
     {% for type in Genres %}
-      <li><a href="{% url 'genres' type.id %}"> {{ type.name }}</a>
+      <li><a href="{% url 'genres' type.id %}"> <h5>{{ type.name }}</h5></a>
     {% endfor %}
 </nav>
 
