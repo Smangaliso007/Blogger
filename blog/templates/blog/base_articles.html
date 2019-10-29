@@ -22,7 +22,7 @@
           {% for article in Articles %}
             <div class="row" id="list_articles">
               <div class="col-sm-4" style="padding: 0;">
-                <img src="{{ article.cover_art.url }}" alt="cover_art" height="80%" width="100%" style="margin-left: 5px;margin-top: 5px;"/>
+                <img src="{{ article.cover_art.url }}" alt="cover_art" height="80%" width="100%" style="margin: 5px 0 5px 5px"/>
               </div>
               <div class="col-sm-8">
                 <h4><a href="{% url 'articles' article.id %}">{{ article.Title }}</a></h4>

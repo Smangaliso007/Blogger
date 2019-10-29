@@ -12,7 +12,7 @@
     {% for article in Articles_by_Genre %}
     <div class="row" id="genre_list_articles">
       <div class="col-sm-4">
-        <img src="{{ article.cover_art.url }}" alt="cover_art" height="75%" width="100%" style="margin-top: 20px;"/>
+        <img src="{{ article.cover_art.url }}" alt="cover_art" height="75%" width="100%" style="margin: 20px 0 20px 0"/>
       </div>
       <div class="col-sm-8">
         <h4><a href="{% url 'articles' article.id %}">{{ article.Title }}</a></h4>
