@@ -7,10 +7,10 @@
       <!-- The List for All Articles -->
       <div class="col-lg-4" style="padding: 0;">
         <div class="row" id="all_tag" style="width: 50%; margin-left: 20px;">
-          <h2>All Articles</h2>
+          <h3>All Articles</h3>
           <div class="dropdown">
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
-              <span class="caret"></span></button>
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">All Articles
+            </button>
               <ul class="dropdown-menu">
                 {% for article in Articles %}
                   <li><a href="{% url 'articles' article.id %}">{{ article.Title }}</a></li>
