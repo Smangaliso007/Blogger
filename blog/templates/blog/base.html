@@ -38,12 +38,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="{% url 'index' %}">
-        <img src="{% static 'images/Logo.png' %}" alt="logo" height="20" width="60"/></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="/">Home</a></li>
+        <li class="active"><a class="navbar-brand" href="{% url 'index' %}">
+          <img src="{% static 'images/Logo.png' %}" alt="logo" height="20" width="60"/></a></li>
+        <li><a href="/">Home</a></li>
         <li><a href="/about">About</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
