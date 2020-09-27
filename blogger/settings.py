@@ -106,7 +106,7 @@ DATABASES = {
 
 DATABASE_URL = 'postgres://gsacrmqhwfhhuy:736eb11eaa147558597bf47739319212e2acf89621009a29cbdb7bd0912e0b12@ec2-23-21-94-99.compute-1.amazonaws.com:5432/d8m52ls12sbs1p'
 conn = psycopg2.connect(DATABASE_URL, sslmode='require')
-DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=False)
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 
